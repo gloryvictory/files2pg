@@ -23,6 +23,7 @@ func main() {
 		panic(err)
 	} else {
 		fmt.Println(config)
+		fmt.Println(config.Db.Password)
 	}
 
 	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+

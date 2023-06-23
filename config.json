@@ -2,6 +2,7 @@
     "db":{
         "address":"localhost",
         "port":"5432",
+        "database":"test",
         "user":"test",
         "password":"test"
     },

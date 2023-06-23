@@ -5,6 +5,7 @@ import "github.com/spf13/viper"
 type DbConfig struct {
 	Address  string `mapstructure:"address"`
 	Port     string `mapstructure:"port"`
+	Database string `mapstructure:"user"`
 	User     string `mapstructure:"user"`
 	Password string `mapstructure:"password"`
 }
@@ -26,6 +27,7 @@ func LoadConfig() (Config, error) {
 	vp.SetConfigName("config")
 	vp.SetConfigType("json")
 	vp.AddConfigPath(".")
+	vp.AddConfigPath("..")
 	vp.AddConfigPath("./internal/config")
 
 	err := vp.ReadInConfig()

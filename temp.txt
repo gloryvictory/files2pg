@@ -1,5 +1,10 @@
 https://www.golinuxcloud.com/convert-io-reader-to-string-golang/
 https://donchev.is/post/working-with-postgresql-in-go-using-pgx/
+https://dev.to/manigandand/list-files-in-a-directory-using-golang-3k78
+https://github.com/theartofdevel?tab=repositories
+https://chelcenter.susu.ru/chel-center.ru/python-yfc/2021/10/24/rabota-s-fajlami-v-python/index.html
+
+
 
 package pg
 

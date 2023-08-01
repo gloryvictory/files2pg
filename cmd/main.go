@@ -24,6 +24,7 @@ func main() {
 	} else {
 		fmt.Println(config)
 		fmt.Println(config.Db.Password)
+		fmt.Println(config.Db.Address)
 	}
 
 	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
@@ -41,4 +42,5 @@ func main() {
 	}
 
 	fmt.Println("Successfully connected!")
+
 }

@@ -1,0 +1,16 @@
+{
+  "db":{
+    "address":"localhost",
+    "port":"5432",
+    "database":"test",
+    "schema":"test",
+    "user":"test",
+    "password":"testpwd"
+  },
+  "server":{
+    "port":"3500"
+  },
+  "source": {
+    "folder":"c:\\test"
+  }
+}

@@ -3,4 +3,4 @@ database: root
 port: 5432
 user: test
 password: test
-location: /app/statping
+location: /app/start

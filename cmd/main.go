@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"files2pg/internal/config"
 	"fmt"
+	"log"
 
 	_ "github.com/lib/pq"
 )
@@ -20,7 +21,9 @@ func main() {
 	config, err := config.LoadConfig()
 
 	if err != nil {
-		panic(err)
+		fmt.Println("Config file not found!")
+		log.Fatal(err)
+		// panic(err)
 	} else {
 		fmt.Println(config)
 		fmt.Println(config.Db.Password)

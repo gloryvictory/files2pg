@@ -6,6 +6,7 @@ type DbConfig struct {
 	Address  string `mapstructure:"address"`
 	Port     string `mapstructure:"port"`
 	Database string `mapstructure:"user"`
+	Schema   string `mapstructure:"schema"`
 	User     string `mapstructure:"user"`
 	Password string `mapstructure:"password"`
 }
@@ -13,10 +14,14 @@ type DbConfig struct {
 type ServerConfig struct {
 	Port string `mapstructure:"port"`
 }
+type SourceConfig struct {
+	Folder string `mapstructure:"folder"`
+}
 
 type Config struct {
 	Db     DbConfig     `mapstructure:"db"`
 	Server ServerConfig `mapstructure:"server"`
+	Source SourceConfig `mapstructure:"source"`
 }
 
 var vp *viper.Viper
@@ -24,7 +29,7 @@ var vp *viper.Viper
 func LoadConfig() (Config, error) {
 	vp = viper.New()
 	var config Config
-	vp.SetConfigName("config")
+	vp.SetConfigName("files2pg")
 	vp.SetConfigType("json")
 	vp.AddConfigPath(".")
 	vp.AddConfigPath("..")
